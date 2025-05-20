@@ -21,8 +21,8 @@ class CharactFile():
         self.DictDC = {}
         IdsShape = (len(VgsSw), len(VdsSw))
         for ch in ChNames:
-            self.DictDC[ch] = {'Ids': np.ones(IdsShape)*np.NaN,
-                               'Slope': np.ones(IdsShape)*np.NaN,
+            self.DictDC[ch] = {'Ids': np.ones(IdsShape)*np.nan,
+                               'Slope': np.ones(IdsShape)*np.nan,
                                'Vds': VdsSw,
                                'Vgs': VgsSw,
                                'ChName': ch,
@@ -30,7 +30,7 @@ class CharactFile():
                                'DateTime': Time}
 
         if SweepConf['Gate']:
-            self.DictDC['Gate'] = {'Ig': np.ones(IdsShape)*np.NaN,
+            self.DictDC['Gate'] = {'Ig': np.ones(IdsShape)*np.nan,
                                    'Vds': VdsSw,
                                    'Vgs': VgsSw,
                                    'ChName': 'Gate',
@@ -53,7 +53,7 @@ class CharactFile():
                     PSDshape = (len(VgsSwAC), nFpsd.size)
                     noise = {}
                     for i in range(VdsSw.size):
-                        noise['Vd{}'.format(i)] = np.ones(PSDshape) * np.NaN
+                        noise['Vd{}'.format(i)] = np.ones(PSDshape) * np.nan
                     Vals['Fpsd'] = nFpsd
                     Vals['PSD'] = noise
 
@@ -62,7 +62,7 @@ class CharactFile():
                     gm = {}
                     BodeShape = (len(VgsSwAC), nFgm.size)
                     for i in range(VdsSw.size):
-                        gm['Vd{}'.format(i)] = np.ones(BodeShape) * np.NaN * np.complex(1)
+                        gm['Vd{}'.format(i)] = np.ones(BodeShape) * np.nan * complex(1)
                     Vals['Fgm'] = nFgm
                     Vals['gm'] = gm
 

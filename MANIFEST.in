@@ -1,5 +1,0 @@
-graft PyGFET
-graft PyDBView
-graft PyGFETRecordExplorer
-include LICENSE README.md
-global-exclude *.pyc

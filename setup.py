@@ -26,26 +26,14 @@ Created on Thu Dec 21 18:30:42 2017
 
 from setuptools import setup, find_packages
 
-_version = '0.1.2b1'
+_version = '0.1.b2'
 
-long_description = """
-                   Library for GFET analysis tools                   
-                   """
+long_description = "GFET chracterization"
 
-install_requires = ['pymysql',
-                    'numpy',
-                    'matplotlib',
-                    'quantities>=0.12',
-                    'scipy',
-                    'neo>=0.5.2',
-                    'nixio',
-                    'xlsxwriter']
+install_requires = [
+					]
 
-console_scripts = ['GFETDbView = PyGFET.GuiDBView.GuiDBView:main',
-                   'GFETRecExp = PyGFET.GuiRecordView.GuiRecordExplorer:main',
-                   'GFETCharactGui = PyGFET.GuiMeasure.GuiCharact:main',
-                   'GFETStimGui = PyGFET.GuiStimulation.GuiStim:main',
-                   'GFETCharactMultiGui = PyGFET.GuiMultiChannel.GuiCharactMultiv2:main',
+console_scripts = ['GFETCharact = GFETCharact.MainGUI:main',
                    ]
 
 entry_points = {'console_scripts': console_scripts, }
@@ -62,20 +50,20 @@ classifiers = ['Development Status :: 3 - Alpha',
                'Operating System :: Unix',
                'Operating System :: OS Independent',
                'Programming Language :: Python',
-               'Programming Language :: Python :: 2.7',
+               'Programming Language :: Python :: 3.7',
                'Topic :: Scientific/Engineering',
                'Topic :: Software Development :: User Interfaces']
 
-setup(name="PyGFET",
+setup(name="GFETCharact",
       version=_version,
-      description="GFET Analysis tools",
+      description="GFET chracterization",
       long_description=long_description,
-      author="Anton Guimerà-Brunet",
+      author="Anton Guimera-Brunet",
       author_email="anton.guimera@csic.es",
-      maintainer="Anton Guimerà-Brunet",
+      maintainer="Anton Guimera-Brunet",
       maintainer_email="anton.guimera@csic.es",
-      url="https://github.com/aguimera/PyGFET",
-      download_url="https://github.com/aguimera/PyGFET",
+      url="https://github.com/aguimera/GFETCharact",
+      download_url="https://github.com/aguimera/GFETCharact",
       license="GPLv3",
       packages=find_packages(),
       classifiers=classifiers,
